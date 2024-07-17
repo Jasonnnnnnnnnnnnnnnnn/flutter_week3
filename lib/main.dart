@@ -9,10 +9,41 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return  MaterialApp(
+      routes: {
+        MainPage.nameRounte:(context) => MainPage(),
+        SecondPage.nameRounte:(context) => SecondPage()
+      },
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  static const String nameRounte = "/main_page";
+  const MainPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Text('Main Page'),
+        ),
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  static const String nameRounte = "/second_page";
+  const SecondPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        child: Center(
+          child: Text('Main Page'),
         ),
       ),
     );

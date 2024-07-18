@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week3_project/echo_my_name.dart';
 import 'package:week3_project/main_page.dart';
 import 'package:week3_project/second_page.dart';
 
@@ -16,7 +17,8 @@ class MainApp extends StatelessWidget {
       initialRoute: MainPage.nameRounte,
       routes: {
         MainPage.nameRounte: (context) => MainPage(),
-        SecondPage.nameRounte: (context) => SecondPage()
+        SecondPage.nameRounte: (context) => SecondPage(),
+        EchoMyName.nameRoute: (context) => EchoMyName(),
       },
     );
   }

@@ -11,7 +11,7 @@ class EchoMyName extends StatefulWidget {
 
 class _EchoMyNameState extends State<EchoMyName> {
   String result = 'ABC';
-  
+
   late TextEditingController _controller;
   @override
   void initState() {
@@ -19,16 +19,22 @@ class _EchoMyNameState extends State<EchoMyName> {
     super.initState();
     _controller = TextEditingController();
   }
+
   @override
   void dispose() {
     // TODO: implement dispose
     _controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Echo My Name'),
+      ),
       body: Container(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
@@ -45,6 +51,7 @@ class _EchoMyNameState extends State<EchoMyName> {
                   log('Clicked');
                   setState(() {
                     result = _controller.text;
+                    _controller.clear();
                   });
                 },
                 child: Text('Echo')),

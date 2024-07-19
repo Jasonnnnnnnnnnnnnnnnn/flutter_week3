@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:week3_project/echo_my_name.dart';
 import 'package:week3_project/main_page.dart';
 import 'package:week3_project/second_page.dart';
+import 'package:week3_project/todo_list.dart';
 
 
 void main() {
@@ -19,6 +20,7 @@ class MainApp extends StatelessWidget {
         MainPage.nameRounte: (context) => MainPage(),
         SecondPage.nameRounte: (context) => SecondPage(),
         EchoMyName.nameRoute: (context) => EchoMyName(),
+         TodoList.nameRounte: (context) => TodoList(),
       },
     );
   }
